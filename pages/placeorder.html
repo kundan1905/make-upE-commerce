@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/placeorder.css">
+    <link rel="stylesheet" href="./styles/login.css">
+
+</head>
+<body>
+  <section id="main_order">
+    <div class="goback"><a onclick="goback()" title="Back"><img src="./image/back arrow.png"></a></div>
+    <div class="order_container">
+        <div class="title">
+            <h2>Product Order Form</h2>
+        </div>
+      <div class="d-flex" >
+        <div id="user_address_detail">
+         
+   
+
+        </div>
+        <form id="user_adress" >
+          <label>
+            <span class="fname" >First Name <span class="required">*</span></span>
+            <input type="text" name="fname" id="fname" required>
+          </label>
+          <label>
+            <span class="lname">Last Name <span class="required">*</span></span>
+            <input type="text" name="lname" id="lname" required>
+          </label>
+          
+          
+          <label>
+            <span>Street Address <span class="required">*</span></span>
+            <input type="text" name="houseadd" id="houseadd" placeholder="House number and street name" required>
+          </label>
+          <label>
+            <span>&nbsp;</span>
+            <input type="text" name="apartment" id="apartment" placeholder="Apartment, suite, unit etc. (optional)" >
+          </label>
+          <label>
+            <span>Town / City <span class="required">*</span></span>
+            <input type="text" name="city" id="city" required> 
+          </label>
+          <label>
+            <span>pin code  <span class="required">*</span></span>
+            <input type="number" name="pinnumber" id="pinnumber" required> 
+          </label>
+         
+          <label>
+            <span>Phone <span class="required">*</span></span>
+            <input type="tel" name="Phone" maxlength="10" pattern="\d{10}" id="phone" required> 
+          </label>
+          <div class="loader"></div>
+       
+          <button type="submit" id="adresssubmitID">Save adress</button>
+        </form>
+        <div class="Yorder" id="productorder">
+          
+      </div>
+      </div>
+
+    </section>
+    <div id="id01" class="modal" style="display: none;">
+  
+      <div class="modal-content animate"  >
+      
+          <span onclick="goback()" class="close" title="Close Modal">&times;</span>
+          
+        <div class="container">
+          <label for="uname"><b>Email</b></label><br>
+          <input type="text" placeholder="Enter Username email" id="Email-ID" name="uname"  >
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id ="Password-ID">
+            
+          <button type="submit"  id="login-ID"  >Login</button>
+          <!-- <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label> -->
+          <p>Or Create account -<a href="#" onclick="openlog2()">Signup now</a></p>
+        
+          <span class="psw" id="forgotID">Forgotpassword?</span>
+          <div id="snackbar1">USER lOGIN SUCCESSFULLY!</div>  
+          <div id="snackbar2">USER lOGOUT SUCCESSFULLY!</div>                     
+
+        </div>
+        
+      </div>
+</div>
+<div id="id02" class="modal" style="display: none;">
+  
+  <div class="modal-content animate" >
+  
+      <span onclick="goback()" class="close" title="Close Modal">&times;</span>
+      
+    <div class="container">
+      <label for="fname">First name:</label>
+          <input type="text" id="fname-ID" name="fnameID" placeholder="Your Firstname" required>
+          <label for ="lname">Last name:</label>
+          <input type="text" id="lname-ID" name="lnameID" placeholder="Your Lastname" required>
+          <label for ="moblie number">Email:</label><br>
+          <input type="email" id="Email_ID"  name="email-ID "   placeholder="Enter the email" required><br>
+          <label for="psw">Create Password:</label>
+          <input type="password" id="Password_ID" placeholder="Create password" minlength="6" name="password-ID" required>
+          <button type="submit"  id="Submit-ID1" >SIGN UP</button><br>
+          <p>Already have acount-<a href="#" onclick="openlog1()">Login now -></a></p>
+          <div id="snackbar">USER REGISTER SUCCESSFULLY!</div>
+                      
+
+    </div>
+    
+  </div>
+</div>
+      <script>
+          function goback(){
+    window.history.back();
+  }
+      </script>
+      <script src="./placeorder.js" type="module"></script>
+      <script src="../pop.js"></script>
+      
+   
+</body>
+</html>

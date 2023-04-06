@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel ="stylesheet"   href="./styles/login.css">
+    <style>
+        tr:nth-child(even) {background-color: #f2f2f2;}
+        .userdetail
+        {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        table{
+            margin: 10px;
+            padding: 20px;
+            width: 100%;
+            height: 200px;
+        }
+        .userimg img{
+            border-radius: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+    </style>
+</head>
+<body>
+    <section class="header_main">
+      <div class="overlay1" id="myheader">
+                  <a href="../index.html">HOME</a>
+                  <a href="./product.html">PRODUCTS</a>
+                  <a href="adress.html">ABOUT US</a>
+                  <a href="./contact.html">CONTACT US</a>
+                  <div class="login-d">
+                    <a onclick="openlog2()" id="login_S" style="width:auto;">signup</a>
+                    <div class="action" id="logoutID">
+                      <div class="profile" onclick="menuToggle();">
+                        <img src="https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=" />
+                      </div>
+                      <div class="menu">
+                        
+                        <ul>
+                          <li>
+                             <a href="user.html">My profile</a>
+                          </li>
+                          <li>
+                          <a href="#">Edit profile</a>
+                          </li>
+                          <li>
+                           <a href="#">Inbox</a>
+                          </li>
+                          <li>
+                           <a href="#">Order</a>
+                          </li>
+                          <li><a href="#">Help</a></li>
+                          <li>
+                            <a href="#" id="logoutbtn">Logout</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                          
+            </div>
+             <div class="login-d">
+                      <a onclick="openlog()" id="login_d" style="width:auto;">Login</a>
+             </div>
+            
+        </div>
+       </section>
+          <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+              
+                <a href="../index.html">HOME</a>
+                <a href="./product.html">PRODUCTS</a>
+                <a href="#">ABOUT</a>
+                <a href="./contact.html">CONTACT US</a>
+                
+              
+                <div class="login-d" >
+                  <a onclick="openlog2()" id="login_S" style="width:auto;">signup</a>
+                </div>
+              <div class="login-d">
+                    <a onclick="openlog()" id="login_d"  style="width:auto;">Login</a>
+               </div>
+                
+        </div>
+              
+             
+            </div>
+            
+            <div id="main">
+              <a class="openbtn" onclick="openNav()">☰ </a>  
+              <div class="search">
+                <input type="text" placeholder="Search.." name="search">
+             </div>
+             <div class="login-d">
+                <a onclick="openlog2()"  style="width:auto;">Signup</a>
+               </div>
+               <div class="login-d">
+                <a onclick="openlog()" style="width:auto;">Login</a>
+              </div>
+             
+            </div>
+            
+            <div id="id01" class="modal">
+
+                  <div class="modal-content animate"  >
+                  
+                      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                      
+                    <div class="container">
+                      <label for="uname"><b>Email</b></label><br>
+                      <input type="text" placeholder="Enter Username email" id="Email-ID" name="uname"  >
+                
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter Password" name="psw" id ="Password-ID">
+                        
+                      <button type="submit"  id="login-ID"  >Login</button>
+                      <!-- <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                      </label> -->
+                      <p>Or Create account -<a href="#" onclick="openlog2()">Signup now</a></p>
+                      <span class="psw" id="forgotID">Forgotpassword?</span>
+                      <div id="snackbar1">USER lOGIN SUCCESSFULLY!</div>  
+                      <div id="snackbar2">USER lOGOUT SUCCESSFULLY!</div>  
+                      <div id="snackbar3">RESETPASSWORD EMAIL SEND TO YOUR REGISTER EMAIL-ID</div> 
+                         <div id="snackbar5">INVAID EMAIL/WRONG PASSWORD</div>                     
+      
+                    </div>
+                    
+                  </div>
+            </div>
+              <div id="id02" class="modal">
+
+                  <div class="modal-content animate" >
+                  
+                      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                      
+                    <div class="container">
+                      <label for="fname">First name</label>
+                          <input type="text" id="fname-ID" name="fnameID" placeholder="Your Firstname">
+                          <label for ="lname">Last name</label>
+                          <input type="text" id="lname-ID" name="lnameID" placeholder="Your Lastname">
+
+                  
+                          
+                          <label for ="moblie number">Email</label><br>
+                          <input type="email" id="Email-ID"  name="email-ID "   placeholder="Enter the email"><br>
+                          <label for="psw">Create Password:</label>
+                          <input type="password" id="Password-ID"placeholder="Create password" name="password-ID" required>
+                          <button type="submit"  id="Submit-ID1" >SIGN UP</button><br>
+                          <div id="snackbar">USER REGISTER SUCCESSFULLY!</div>
+                                      
+      
+                    </div>
+                    
+                  </div>
+              </div>
+              
+    
+    </div>
+    <div class="userdetail">
+        <center>
+        <table>
+            <tr>
+                <td>NAME:</td>
+                <td id="USERNAME"></td>
+                
+            </tr>
+            <tr>
+                <td>Email-ID:</td>
+                <td ID="USEREMAIL"></td>
+                
+            </tr>
+            <tr>
+                <td>PHONE NUMBER:</td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <td> DELIVERY ADDRESS:</td>
+                <td></td>
+                
+            </tr>
+
+        </table>
+        </center>
+                  
+    </div>
+    <script>
+        function menuToggle() {
+        const toggleMenu = document.querySelector(".menu");
+        toggleMenu.classList.toggle("active");
+      }
+
+
+      //form login
+      var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+    </script>
+</body>
+<script src="../index.js" type="module"></script>    
+
+</html>

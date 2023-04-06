@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel ="stylesheet"href="https://fonts.googleapis.com/css?family=Tangerine|Sofia">
+        <meta name ="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="all.min.css">
+        <script src="../pop.js"></script>
+        <link rel ="stylesheet"   href="./styles/footer.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script language="javascript" type="text/javascript">
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+
+    function validateForm() {
+     let x = document.forms["myForm"]["fname"].value;
+     let y = document.forms["myForm"]["lname"].value;
+    if (x == "" || y == "" ) {
+       alert("Name must be filled out");
+       return false;
+       }
+     }
+
+    
+   
+</script>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        input[type=text], select,textarea{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 2px;
+            resize: none;
+
+            
+        }
+        input[type=number], select,textarea{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 2px;
+            
+        }
+        input[type=sumbit]{
+            background-color: black;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        input[type=submit]:hover{
+            background-color: rgb(248, 235, 235);
+
+        }
+        form{
+            border-radius: 5px;
+            background-color: rgb(231, 236, 236);
+            padding: 20px;
+    
+            
+            position: relative;
+            height:100%;
+            width: auto;
+            float: right;
+            opacity: 0.7;
+            
+            
+            
+            
+        }
+        .img{
+        
+    
+    background-position: center;
+    height: 700px;
+    
+    
+    
+    background-repeat: no-repeat;
+    
+    
+
+        }
+    .header_1{
+        font-family:"Tangerine", serif;
+        font-size : 80px;
+        padding: auto;
+        
+        color: rgb(67, 93, 100);
+        text-align: center;
+    }
+    
+    
+     .open-button {
+        background-color: #555;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        opacity: 0.8;
+        
+        margin: 50px;
+        float:right;
+        
+        bottom: 23px;
+        right: 28px;
+        width: 280px;
+        }
+     .popup{
+        z-index: 1;
+        display: none;
+     }
+     .cancel{
+        float: right;
+     }
+     .cancel:hover{
+        background-color:  rgb(124, 183, 235);
+     }
+     .map{
+        margin-left:30px;
+        margin-bottom: 20px;
+        position: relative;
+        opacity: 0.9;
+        
+     }
+    
+/* STYLES SPECIFIC TO FOOTER  */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.row_1{
+            display: flex;
+            flex-basis: 50%;
+            flex-wrap: wrap;
+             
+      }
+  .col_1{
+    flex-basis: 50%;
+  }
+  .col_2{
+    flex-basis:50% ;
+  }
+
+    
+  
+
+    </style>
+
+
+    </head>
+    <body>
+      <nav>
+             <h1 class="header_1">Contact us</h1>
+             <div class="goback"><a onclick="goback()">&#8592;</a></div>
+            
+       </nav>
+       <sectiom >
+         <div class="row_1">
+            <div class="col_1">
+              <button class="open-button" onmouseenter="openForm()">Open  Form</button>
+              <div  id="myFor" class="popup">
+              
+                  <form name="myForm" action="#" onsubmit="return validateForm()" method="post">   
+
+          
+                  <label for="fname">First name</label>
+                  <input type="text" id="fname" name="fname" placeholder="Your Firstname">
+                  <label for ="lname">Last name</label>
+                  <input type="text" id="lname" name="lname" placeholder="Your Lastname">
+                  <label for ="moblie number">Moblie number:</label><br>
+                  <input type="number" id=number  name="moblie number"   placeholder="Enter the number" ><br>
+                  <label for="subject">subject</label>
+                  <textarea  id="subject"  placeholder="any ....." style="height: 200px;"></textarea>
+                  <input type="submit" value="Submit">
+                  <button type="button" class="cancel" onclick="closeForm()">Close</button>
+
+              </form>
+              </div>
+
+              </div>
+              <div class="col_2">
+                <div class="map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.1018908415103!2d86.41126671472985!3d22.6499893851431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f603360960dde1%3A0xe8281cf98a51f2f0!2sSuhagan%20Saree!5e0!3m2!1sen!2sin!4v1662215071674!5m2!1sen!2sin" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+         
+         
+       </sectiom>
+       
+
+
+        
+        
+    
+       
+        
+       <footer>
+       <div class="content">
+         <div class="top">
+           <div class="logo-details">
+             <i class="fab fa-slack"></i>
+             <span class="logo_name"></span>
+           </div>
+           <div class="media-icons">
+             <a href="#"><i class="fab fa-facebook-f"></i></a>
+             <a href="#"><i class="fab fa-twitter"></i></a>
+             <a href="#"><i class="fab fa-instagram"></i></a>
+             <a href="#"><i class="fab fa-linkedin-in"></i></a>
+             <a href="#"><i class="fab fa-youtube"></i></a>
+           </div>
+         </div>
+         <div class="link-boxes">
+           <ul class="box">
+             <li class="link_name">Navigation</li>
+             <li><a href="#">Home</a></li>
+             <li><a href="#">Contact us</a></li>
+             <li><a href="#">About us</a></li>
+             <li><a href="#">Get started</a></li>
+           </ul>
+           <ul class="box">
+             <li class="link_name">Services</li>
+             <li><a href="#"></a></li>
+             <li><a href="#"></a></li>
+             <li><a href="#">Check for Availability </a></li>
+             <li><a href="#">hehe</a></li>
+           </ul>
+           <ul class="box">
+             <li class="link_name">Account</li>
+             <li><a href="#">Profile</a></li>
+             <li><a href="#">My account</a></li>
+             <li><a href="#">Prefrences</a></li>
+             <li><a href="#"></a></li>
+           </ul>
+           <ul class="box input-box">
+             <li class="link_name">Subscribe</li>
+             <li><input type="text" placeholder="Enter your email"></li>
+             <li><input type="button" value="Subscribe"></li>
+           </ul>
+         </div>
+       </div>
+       <div class="bottom-details">
+         <div class="bottom_text">
+           <span class="copyright_text">Copyright © 2021 <a href="#">Phewss.</a>All rights reserved</span>
+           <span class="policy_terms">
+             <a href="#">Privacy policy</a>
+             <a href="#">Terms & condition</a>
+           </span>
+         </div>
+       </div>
+     </footer>
+        
+    </body>
+</html>

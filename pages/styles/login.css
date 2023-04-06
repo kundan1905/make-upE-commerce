@@ -1,0 +1,165 @@
+.modal input[type=text], input[type=password] ,input[type=number],input[type=email]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  input:invalid{
+    animation: invalidInput .3s;
+  }
+  @keyframes invalidInput {
+       0% {transform: skew(-15deg)}
+       25% {transform: skew(-15deg)}
+  50% {transform: skew(-15deg)}
+   100% {transform: skew(0deg)}
+  }
+
+  
+  /* Set a style for all buttons */
+  button {
+    background-color:green;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 25px;
+    background:#730606;
+  }
+  
+  span.psw {
+    float: right;
+    
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(5, 156, 154); /* Fallback color */
+    background-color: rgba(135, 138, 201, 0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  .modal .modal-content .container a{
+    text-decoration: none;
+    color: #f44336;
+  }
+  .modal .modal-content .container p{
+    width: 100%;
+
+  }
+   
+  
+  
+  
+  /* Modal Content/Box */
+  .modal-content {
+      background: linear-gradient(rgba(1,1,1,.5), rgba(1,1,1,.5)), url(../image/loginback2.jpg);
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 5px; /* Could be more or less, depending on screen size */
+    color: white;
+    box-shadow: 0 0 10px #0009;
+
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color:white;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+  }     
+  @media screen and (max-width: 450px) {
+    .modal-content{
+       width: auto;
+       
+    }
+  }     
+  .login-d{
+      cursor: pointer;
+  }  
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.popup{
+    z-index: 1;
+    display: none;
+ }
+ .signup{
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 17px;
+
+
+ }
+ 

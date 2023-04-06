@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/product.css">
+    
+        <link rel="stylesheet" href="./styles/login.css">
+        <link rel="stylesheet" href="../style.css">
+        <link rel ="stylesheet"   href="./styles/footer.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;500;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="../pop.js" type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        
+
+        
+        
+        <style>
+             .search input[type=text]{
+                width:200px;
+                
+            padding: 12px 20px;
+            
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            right: 30px;
+
+            }
+          .logo h1{
+            padding: 4px;
+          }
+            
+         </style>     
+    </head>
+    <body>
+       
+<section class="header_main"> 
+      <header>
+        <nav>
+            <div class="logo">
+               
+                <h1>R.FASHION</h1>
+            </div>
+            <div class="search__bar__header">
+                <input type="text">
+                <input type="button" value="search">
+            </div>
+            <div class="cart__header__desktop">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>50</span>
+            </div>
+        </nav>
+    </header>
+          
+      <div class="overlay1" id="myheader">
+        <a href="../index.html">HOME</a>
+        <a href="./product.html">PRODUCTS</a>
+        
+        <a href="adress.html">ABOUT US</a>
+        <a href="./contact.html">CONTACT US</a>
+
+        
+       
+        <div class="login-d">
+          <a onclick="openlog2()" id="login_S" style="width:auto;">signup</a>
+          <div class="action" >
+            
+            <div class="menu">
+              
+              <ul>
+                <li>
+                   <a href="user.html">My profile</a>
+                </li>
+                <li>
+                <a href="#">Edit profile</a>
+                </li>
+                <li>
+                 <a href="#">Inbox</a>
+                </li>
+                <li>
+                 <a href="#">Order</a>
+                </li>
+                <li><a href="#">Help</a></li>
+                <li>
+                  <a href="#" id="logoutbtn">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </div>
+   <div class="login-d">
+            <a onclick="openlog()" id="login_d" style="width:auto;">Login</a>
+   </div>
+    <div class="user_profil" id="logoutID">
+      
+        <div class="profile" onclick="menuToggle();">
+          <img src="https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=" />
+        </div>
+
+    </div>
+
+     <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            
+              <a href="../index.html">HOME</a>
+              <a href="./product.html">PRODUCTS</a>
+              <a href="#" onclick="openForm3()"   ondblclick="closeForm3()">Categoriers</a>
+              <a href="#">ABOUT US</a>
+              <a href="./contact.html">CONTACT US</a>
+              <div class="login-d">
+                <a onclick="openlog2()"  style="width:auto;">Signup</a>
+              </div>
+               <div class="login-d">
+                  <a onclick="openlog()" style="width:auto;">Login</a>
+                </div>
+         </div>
+                  
+    <div class="main" id="main">
+      <a class="openbtn" onclick="openNav()">☰ </a> 
+      
+     <div class="login-d">
+        <a onclick="openlog2()"  style="width:auto;">Signup</a>
+       </div>
+      <div class="login-d">
+        <a onclick="openlog()" style="width:auto;">Login</a>
+      </div>
+    </div>
+    <div id="id01" class="modal" style="display: none;">
+  
+      <div class="modal-content animate"  >
+      
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          
+        <div class="container">
+          <label for="uname"><b>Email</b></label><br>
+          <input type="text" placeholder="Enter Username email" id="Email-ID" name="uname"  >
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id ="Password-ID">
+            
+          <button type="submit"  id="login-ID">Login</button>
+          <!-- <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label> -->
+          <p>Or Create account -<a href="#" onclick="openlog2()">Signup now</a></p>
+          <span class="psw" id="forgotID">Forgotpassword?</span>
+          <div id="snackbar1">USER lOGIN SUCCESSFULLY!</div>  
+          <div id="snackbar2">USER lOGOUT SUCCESSFULLY!</div> 
+          <div id="snackbar3">RESETPASSWORD EMAIL SEND TO YOUR REGISTER EMAIL-ID</div>  
+             <div id="snackbar5">INVAID EMAIL/WRONG PASSWORD</div>                        
+
+        </div>
+        
+      </div>
+  </div>
+  <div id="id02" class="modal"style="display: none;">
+
+      <div class="modal-content animate" >
+      
+          <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+          
+        <div class="container">
+          <label for="fname">First name</label>
+            <input type="text" id="fname-ID" name="fnameID" placeholder="Your Firstname">
+            <label for ="lname">Last name</label>
+            <input type="text" id="lname-ID" name="lnameID" placeholder="Your Lastname">
+             <label for ="moblie number">Email</label><br>
+              <input type="email" id="Email_ID"  name="email-ID "   placeholder="Enter the email"><br>
+              <label for="psw">Create Password:</label>
+              <input type="password" id="Password_ID"placeholder="Create password" name="password-ID" required>
+              <button type="submit"  id="Submit-ID1" >SIGN UP</button><br>
+              <p>Already have acount-<a href="#" onclick="openlog1()">Login now -></a></p>
+              <div id="snackbar">USER REGISTER SUCCESSFULLY!</div>
+        </div>
+      </div>
+  </div>
+</section>
+          
+         
+
+
+        <h3 class="recomd">RECOMMENDED</h3>   
+        
+        
+        <div class="row" id="card__container">
+            
+        </div>
+        <div class="row" id="saree__container">
+       </div>
+
+        <div class="uparrow" id="uparrow" title="Go-Top"><img src ="../image/up-arrow.png"> </div>
+        <footer>
+        <div class="content">
+          <div class="top">
+            <div class="logo-details">
+              <i class="fab fa-slack"></i>
+              <span class="logo_name"></span>
+            </div>
+            <div class="media-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="link-boxes">
+            <ul class="box">
+              <li class="link_name">Navigation</li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Get started</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Services</li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#">Check for Availability </a></li>
+              <li><a href="#">hehe</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Account</li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">My account</a></li>
+              <li><a href="#">Prefrences</a></li>
+              <li><a href="#"></a></li>
+            </ul>
+            <ul class="box input-box">
+              <li class="link_name">Subscribe</li>
+              <li><input type="text" placeholder="Enter your email"></li>
+              <li><input type="button" value="Subscribe"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-details">
+          <div class="bottom_text">
+            <span class="copyright_text">Copyright © 2021 <a href="#">Phewss.</a>All rights reserved</span>
+            <span class="policy_terms">
+              <a href="#">Privacy policy</a>
+              <a href="#">Terms & condition</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      
+        <script>
+            function openForm3() {
+            document.getElementById("myFor").style.display= "block";
+            }
+
+            function closeForm3() {
+            document.getElementById("myFor").style.display = "none";
+            }
+           
+            // Get the modal
+           var modal = document.getElementById('id01');
+
+             // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+           //header
+          window.onscroll =function(){myfunction()};
+          var header=document.getElementById("myheader");
+          var sticky =header.offsetTop;
+          function myfunction(){
+            if( window.pageYOffset> sticky){
+              header.classList.add("sticky");
+            }else {
+              header.classList.remove("sticky");
+            }
+          }
+           //user profil
+            function menuToggle() {
+        const toggleMenu = document.querySelector(".menu");
+        toggleMenu.classList.toggle("active");
+      }
+
+      function list() {
+        const toggleMenu = document.querySelector(".list2");
+        toggleMenu.classList.toggle("display");
+      }
+           
+           
+        
+              
+        </script>
+
+       
+       <script src="../index.js" type="module"></script>    
+   </body>
+</html>
